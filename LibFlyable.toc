@@ -1,0 +1,15 @@
+## Interface: 70300
+## Version: @project-version@
+
+## Title: Lib: Flyable
+## Notes: Enhanced version of the IsFlyableArea API function
+
+## Author: Phanx
+## X-Email: addons@phanx.net
+## X-License: Public Domain
+## X-Website: https://github.com/phanx-wow/LibFlyable
+## X-Curse-Project-ID:
+## X-WoWI-ID:
+
+LibStub/LibStub.lua
+LibFlyable.lua
