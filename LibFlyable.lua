@@ -6,7 +6,6 @@
 	This is free and unencumbered software released into the public domain.
 	https://github.com/phanx-wow/LibFlyable
 	https://wow.curseforge.com/projects/libflyable
-	https://www.wowinterface.com/downloads/info22987-LibFlyable
 ----------------------------------------------------------------------]]
 -- TODO: Find out when Wintergrasp (mapID 501) isn't flyable? Or too old to bother with?
 -- TODO: is Legion!Dalaran flyable with Broken Isles Pathfinder ???
@@ -90,11 +89,11 @@ local function CanFly()
 		-- the patch (which removed all such spells from the game).
 		if not IsFlyableArea() then
 			-- Might be affected by the bug, check more stuff...
-			print("maybe...")
+			-- print("maybe...")
 
 			if not flyContinents735[instanceMapID] then
 				-- Continent is not affected by the bug. API is correct.
-				print("nope: continent not bugged")
+				-- print("nope: continent not bugged")
 				return false
 			end
 
@@ -103,12 +102,12 @@ local function CanFly()
 				-- Continent is flyable, but zone is not. Note that this check
 				-- won't be accurate if the world map is open to a zone other
 				-- than the one in which the player is currently located.
-				print("nope: zone excluded")
+				-- print("nope: zone excluded")
 				return false
 			end
 
 			-- ¯\_(:/)_/¯
-			print("probably...")
+			-- print("probably...")
 		end
 		-- ^^^ end of workaround
 		return IsSpellKnown(34090) or IsSpellKnown(34091) or IsSpellKnown(90265)
