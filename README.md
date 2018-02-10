@@ -1,11 +1,6 @@
 # LibFlyable
 
-Replacement for the IsFlyableArea API function in World of Warcraft.
-
-```
-lib = LibStub("LibFlyable")
-isFlyable = lib:IsFlyableArea()
-```
+**Replacement for the IsFlyableArea API function in World of Warcraft.**
 
 Avoids these long-standing bugs with IsFlyableArea:
 
@@ -25,13 +20,27 @@ zones, but IsFlyableArea returns false for characters who had not previously
 learned the appropriate spell.
 
 
+## Usage
+
+```
+lib = LibStub("LibFlyable")
+isFlyable = lib:IsFlyableArea()
+```
+
+**Source code and bug reports on GitHub:**  
+<https://github.com/phanx-wow/LibFlyable>
+
+**URL to use with the CurseForge packager:**  
+`https://repos.curseforge.com/wow/libflyable`  
+Only tagged stable releases are pushed to CurseForge.
+
+
 ## Contributing
 
 Pull requests and bug reports are encouraged. I no longer play WoW, so
 I will not notice relevant game changes unless someone tells me about them.
-
 If you are an experienced and active WoW addon author, and are interested in
-becoming a permanent official maintainer of this library, please contact me!
+becoming a permanent official maintainer of this library, please contact me.
 
 
 ## Unlicense

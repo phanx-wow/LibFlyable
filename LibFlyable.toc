@@ -8,8 +8,7 @@
 ## X-Email: addons@phanx.net
 ## X-License: Public Domain
 ## X-Website: https://github.com/phanx-wow/LibFlyable
-## X-Curse-Project-ID:
-## X-WoWI-ID:
+## X-Curse-Project-ID: 287183
 
 LibStub/LibStub.lua
 LibFlyable.lua
