@@ -1,8 +1,5 @@
 package-as: LibFlyable
 
-ignore:
-   - README.md
-
 enable-nolib-creation: no
 
 externals:
