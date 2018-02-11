@@ -2,7 +2,7 @@
 ## Version: @project-version@
 
 ## Title: Lib: Flyable
-## Notes: Enhanced version of the IsFlyableArea API function
+## Notes: Replacement for the IsFlyableArea API function
 
 ## Author: Phanx
 ## X-Email: addons@phanx.net

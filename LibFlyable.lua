@@ -1,6 +1,6 @@
 --[[--------------------------------------------------------------------
 	LibFlyable
-	Enhanced version of the IsFlyableArea API function in World of Warcraft.
+	Replacement for the IsFlyableArea API function in World of Warcraft.
 	Author : Phanx <addons@phanx.net>
 	License: Public Domain
 	This is free and unencumbered software released into the public domain.

@@ -22,9 +22,9 @@ learned the appropriate spell.
 
 ## Usage
 
-```
+```lua
 lib = LibStub("LibFlyable")
-isFlyable = lib:IsFlyableArea()
+isFlyable = lib:IsFlyableArea() -- true/false
 ```
 
 **Source code and bug reports on GitHub:**  
@@ -32,7 +32,7 @@ isFlyable = lib:IsFlyableArea()
 
 **URL to use with the CurseForge packager:**  
 `https://repos.curseforge.com/wow/libflyable`  
-Only tagged stable releases are pushed to CurseForge.
+Only tagged releases are pushed to CurseForge, so using this URL will ensure the packager always gives you a tested and stable version of the library.
 
 
 ## Contributing
