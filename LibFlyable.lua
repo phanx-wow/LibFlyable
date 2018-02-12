@@ -7,7 +7,13 @@
 	https://github.com/phanx-wow/LibFlyable
 	https://wow.curseforge.com/projects/libflyable
 ----------------------------------------------------------------------]]
--- TODO: Find out when Wintergrasp (mapID 501) isn't flyable? Or too old to bother with?
+-- TODO:
+-- Wintergrasp (mapID 501) status detection? Or too old to bother with?
+-- Helheim Exterior Area (instanceMapID 1463) never flyable?
+-- Draenor garrison flyable. IsFlyableArea OK?
+-- Draenor shipyard flyable?
+-- Legion class hall flyable for DK, druid, hunter. IsFlyableArea OK? Or mapID override.
+-- Argus not flyable. IsFlyableArea OK? Or instanceMapID? Or mapID override.
 
 local MAJOR, MINOR = "LibFlyable", 1
 assert(LibStub, MAJOR.." requires LibStub")
@@ -25,8 +31,9 @@ local flyingSpells = {
 	-- Broken Isles Pathfinder
 	[1220] = 233368, -- Broken Isles
 	-- NEVER
-	[1191] = -1, -- Ashran
+	[1191] = -1, -- Ashran (PvP)
 	[1265] = -1, -- Tanaan Jungle Intro
+	[1463] = -1, -- Helheim Exterior Area
 }
 
 -- Workaround for bug in patch 7.3.5

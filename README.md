@@ -7,7 +7,7 @@ Avoids these long-standing bugs with IsFlyableArea:
 - Broken Isles zones are only flyable with the Broken Isles Pathfinder ability.
 - Draenor zones are only flyable with the Draenor Pathfinder ability.
 - Warlords garrisons and Legion class halls are *never* flyable.
-- Ashran and the Tanaan Jungle Intro are *never* flyable.
+- Ashran (PvP) and the Tanaan Jungle Intro are *never* flyable.
 
 Also avoids the new bugs introduced in Patch 7.3.5:
 
@@ -27,12 +27,13 @@ lib = LibStub("LibFlyable")
 isFlyable = lib:IsFlyableArea() -- true/false
 ```
 
-**Source code and bug reports on GitHub:**  
+**Source code and bug reports on GitHub:**
 <https://github.com/phanx-wow/LibFlyable>
 
-**URL to use with the CurseForge packager:**  
-`https://repos.curseforge.com/wow/libflyable`  
-Only tagged releases are pushed to CurseForge, so using this URL will ensure the packager always gives you a tested and stable version of the library.
+**URL to use with the CurseForge packager:**
+`https://repos.curseforge.com/wow/libflyable`
+Only tagged releases are pushed to CurseForge, so using this URL will ensure
+the packager always gives you a tested and stable version of the library.
 
 
 ## Contributing
