@@ -8,7 +8,6 @@
 	https://wow.curseforge.com/projects/libflyable
 ----------------------------------------------------------------------]]
 -- TODO: Find out when Wintergrasp (mapID 501) isn't flyable? Or too old to bother with?
--- TODO: is Legion!Dalaran flyable with Broken Isles Pathfinder ???
 
 local MAJOR, MINOR = "LibFlyable", 1
 assert(LibStub, MAJOR.." requires LibStub")
@@ -48,7 +47,6 @@ local flyContinents735 = {
 -- Workaround for bug in patch 7.3.5
 local noFlyZones735 = {
 	-- List of no-fly zones on otherwise flyable continents.
-	[1014] = true, -- Dalaran (Legion version)
 }
 
 local noFlySubzones = {
