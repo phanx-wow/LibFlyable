@@ -33,6 +33,13 @@ local ContinentSpells = {
 	[1191] = -1, -- Ashran (PvP)
 	[1265] = -1, -- Tanaan Jungle Intro
 	[1463] = -1, -- Helheim Exterior Area
+	-- No-fly class halls where IsFlyableArea returns true:
+	-- Note some are flyable at the entrance, but not inside; just call it all unflyable.
+	[1519] = -1, -- The Fel Hammer (Demon Hunter)
+	[1514] = -1, -- The Wandering Isle (Monk)
+	[1469] = -1, -- The Heart of Azeroth (Shaman)
+	[1107] = -1, -- Dreadscar Rift (Warlock)
+	[1479] = -1, -- Skyhold (Warrior)
 }
 
 -- Workaround for bug in patch 7.3.5
