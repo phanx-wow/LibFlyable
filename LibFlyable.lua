@@ -10,10 +10,6 @@
 -- TODO:
 -- Wintergrasp (mapID 501) status detection? Or too old to bother with?
 -- Helheim Exterior Area (instanceMapID 1463) never flyable?
--- Draenor garrison flyable. IsFlyableArea OK?
--- Draenor shipyard flyable?
--- Legion class hall flyable for DK, druid, hunter. IsFlyableArea OK? Or mapID override.
--- Argus not flyable. IsFlyableArea OK? Or instanceMapID? Or mapID override.
 
 local MAJOR, MINOR = "LibFlyable", 1
 assert(LibStub, MAJOR.." requires LibStub")
@@ -26,9 +22,20 @@ if not lib then return end
 
 local ContinentSpells = {
 	-- Continents/instances requiring a spell to fly:
-	[1116] = 191645, -- Draenor (Draenor Pathfinder)
-	[1464] = 191645, -- Tanaan Jungle (Draenor Pathfinder)
-	[1220] = 233368, -- Broken Isles (Broken Isles Pathfinder)
+	-- Draenor Pathfinder
+	[1116] = 191645, -- Draenor
+	[1464] = 191645, -- Tanaan Jungle
+	[1152] = 191645, -- FW Horde Garrison Level 1
+	[1330] = 191645, -- FW Horde Garrison Level 2
+	[1153] = 191645, -- FW Horde Garrison Level 3
+	[1154] = 191645, -- FW Horde Garrison Level 4
+	[1158] = 191645, -- SMV Alliance Garrison Level 1
+	[1331] = 191645, -- SMV Alliance Garrison Level 2
+	[1159] = 191645, -- SMV Alliance Garrison Level 3
+	[1160] = 191645, -- SMV Alliance Garrison Level 4
+	-- Broken Isles Pathfinder
+	[1220] = 233368, -- Broken Isles
+
 	-- No-fly continents/instances where IsFlyableArea returns true:
 	[1191] = -1, -- Ashran (PvP)
 	[1265] = -1, -- Tanaan Jungle Intro
