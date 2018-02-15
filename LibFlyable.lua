@@ -40,6 +40,8 @@ local ContinentSpells = {
 	[1191] = -1, -- Ashran (PvP)
 	[1265] = -1, -- Tanaan Jungle Intro
 	[1463] = -1, -- Helheim Exterior Area
+	[1669] = -1, -- Argus (mostly OK, few spots are bugged)
+
 	-- No-fly class halls where IsFlyableArea returns true:
 	-- Note some are flyable at the entrance, but not inside; just call it all unflyable.
 	[1519] = -1, -- The Fel Hammer (Demon Hunter)
