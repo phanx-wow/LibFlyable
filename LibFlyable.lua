@@ -43,7 +43,8 @@ local ContinentSpells = {
 	[1669] = -1, -- Argus (mostly OK, few spots are bugged)
 
 	-- No-fly class halls where IsFlyableArea returns true:
-	-- Note some are flyable at the entrance, but not inside; just call it all unflyable.
+	-- Note some are flyable at the entrance, but not inside;
+	-- flying serves no purpose here, so just say no.
 	[1519] = -1, -- The Fel Hammer (Demon Hunter)
 	[1514] = -1, -- The Wandering Isle (Monk)
 	[1469] = -1, -- The Heart of Azeroth (Shaman)
@@ -58,12 +59,11 @@ local FlyableContinents735 = {
 	-- the IsFlyableArea() API function was not updated accordingly,
 	-- and incorrectly returns false on these continents for characters
 	-- who did not know the appropriate spell before the patch.
-	[   0] = true, -- Eastern Kingdoms (Flight Master's License)
-	[   1] = true, -- Kalimdor (Flight Master's License)
-	[ 646] = true, -- Deepholm (Flight Master's License)
-	[ 571] = true, -- Northrend (Cold Weather Flying)
-	[1220] = true, -- Dalaran (Cold Weather Flying) (only in Wrath version @ mapID 504)
-	[ 870] = true, -- Pandaria (Wisdom of the Four Winds)
+	[  0] = true, -- Eastern Kingdoms (Flight Master's License)
+	[  1] = true, -- Kalimdor (Flight Master's License)
+	[646] = true, -- Deepholm (Flight Master's License)
+	[571] = true, -- Northrend (Cold Weather Flying)
+	[870] = true, -- Pandaria (Wisdom of the Four Winds)
 }
 
 -- Workaround for bug in patch 7.3.5
