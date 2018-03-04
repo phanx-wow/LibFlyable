@@ -9,7 +9,7 @@
 ----------------------------------------------------------------------]]
 -- TODO: Wintergrasp (mapID 501) status detection? Or too old to bother with?
 
-local MAJOR, MINOR = "LibFlyable", 2
+local MAJOR, MINOR = "LibFlyable", 3
 assert(LibStub, MAJOR.." requires LibStub")
 local lib, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 if not lib then return end
@@ -38,6 +38,7 @@ local spellForContinent = {
 	[1191] = -1, -- Ashran (PvP)
 	[1265] = -1, -- Tanaan Jungle Intro
 	[1463] = -1, -- Helheim Exterior Area
+	[1500] = -1, -- Broken Shore (scenario for DH Vengeance artifact)
 	[1669] = -1, -- Argus (mostly OK, few spots are bugged)
 
 	-- Unflyable class halls where IsFlyableArea returns true:
@@ -64,6 +65,13 @@ local flyableContinents = {
 	[870] = true, -- Pandaria (Wisdom of the Four Winds)
 }
 
+-- Workaround for bug in patch 7.3.5
+local noFlyZones = {
+	-- These zones are not flyable, and IsFlyableArea() correctly returns
+	-- false there, but are on continents affected by the 7.3.5 bug.
+	[GetMapNameByID(951) or "ERROR"] = true, -- Timeless Isle
+}
+
 local noFlySubzones = {
 	-- Unflyable subzones where IsFlyableArea() returns true:
 	["Nespirah"] = true, ["Неспира"] = true, ["네스피라"] = true, ["奈瑟匹拉"] = true, ["奈斯畢拉"] = true,
@@ -79,7 +87,7 @@ local IsFlyableArea = IsFlyableArea
 local IsSpellKnown = IsSpellKnown
 
 function lib.IsFlyableArea()
-	-- if not IsFlyableArea() -- Workaround for bug in patch 7.3.5
+	-- if not IsFlyableArea() -- Untrustable in patch 7.3.5
 	if noFlySubzones[GetSubZoneText() or ""] then
 		return false
 	end
@@ -96,6 +104,9 @@ function lib.IsFlyableArea()
 	-- the patch (which removed all such spells from the game).
 	if not IsFlyableArea() and not flyableContinents[instanceMapID] then
 		-- Continent is not affected by the bug. API is correct.
+		return false
+	elseif flyableContinents[instanceMapID] and noFlyZones[GetZoneText() or ""] then
+		-- Continent is affected, but API is correct, zone is not flyable.
 		return false
 	end
 
