@@ -5,18 +5,9 @@
 Avoids these long-standing bugs with IsFlyableArea:
 
 - Broken Isles zones are only flyable with the Broken Isles Pathfinder ability.
-- Draenor zones (including the garrison) are only flyable with the Draenor Pathfinder ability.
-- Ashran (PvP) and the Tanaan Jungle Intro are *never* flyable.
-
-Also avoids the new bugs introduced in Patch 7.3.5:
-
-- Pandaria zones no longer require Wisdom of the Four Winds.
-- Northrend zones no longer require Cold Weather Flying.
-- Eastern Kingdoms, Kalimdor, and Deepholm no longer require Flight Master's License.
-
-These spells were removed from the game, and all characters can fly in these
-zones, but IsFlyableArea returns false for characters who had not previously
-learned the appropriate spell.
+- Draenor zones are only flyable with the Draenor Pathfinder ability.
+- Certain maps like Argus and the Tanaan Jungle Intro are not flyable.
+- Certain Legion class halls are not flyable.
 
 
 ## Usage
@@ -26,11 +17,11 @@ lib = LibStub("LibFlyable")
 isFlyable = lib:IsFlyableArea() -- true/false
 ```
 
-**Source code and bug reports on GitHub:**
+**Source code and bug reports on GitHub:**  
 <https://github.com/phanx-wow/LibFlyable>
 
-**URL to use with the CurseForge packager:**
-`https://repos.curseforge.com/wow/libflyable`
+**URL to use with the CurseForge packager:**  
+`https://repos.curseforge.com/wow/libflyable`  
 Only tagged releases are pushed to CurseForge, so using this URL will ensure
 the packager always gives you a tested and stable version of the library.
 
