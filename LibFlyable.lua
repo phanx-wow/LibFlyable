@@ -33,6 +33,10 @@ local spellForContinent = {
 	[1160] = 191645, -- SMV Alliance Garrison Level 4
 	-- Broken Isles Pathfinder
 	[1220] = 233368, -- Broken Isles
+	-- Battle for Azeroth Pathfinder
+	[1642] = 278833, -- Zandalar
+	[1643] = 278833, -- Kul Tiras
+	[1718] = 278833, -- Nazjatar
 
 	-- Unflyable continents/instances where IsFlyableArea returns true:
 	[1191] = -1, -- Ashran (PvP)
