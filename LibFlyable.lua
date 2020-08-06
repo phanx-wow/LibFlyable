@@ -53,6 +53,37 @@ local spellForContinent = {
 	[1469] = -1, -- The Heart of Azeroth (Shaman)
 	[1107] = -1, -- Dreadscar Rift (Warlock)
 	[1479] = -1, -- Skyhold (Warrior)
+
+	-- Unflyable island expeditions where IsFlyableArea returns true:
+	[1813] = -1, -- Un'gol Ruins
+	[1814] = -1, -- Havenswood
+	[1879] = -1, -- Jorundall
+	[1882] = -1, -- Verdant Wilds
+	[1883] = -1, -- Whispering Reef
+	[1892] = -1, -- Rotting Mire
+	[1893] = -1, -- The Dread Chain
+	[1897] = -1, -- Molten Clay
+	[1898] = -1, -- Skittering Hollow
+	[1907] = -1, -- Snowblossom Village
+	[2124] = -1, -- Crestfall
+
+	-- Unflyable Dungeons where IsFlyableArea returns true:
+	[1763] = -1, -- Atal'dazar
+
+	-- Unflyable Warfronts where IsFlyableArea returns true:
+	[1943] = -1, -- The Battle of Stormgarde
+	[1876] = -1, -- Warfronts Arathi - Horde
+	
+	-- Unflyable Raids where IsFlyableArea returns true:
+	[2169] = -1, -- Uldir: The Oblivion Door
+	
+	-- Unflyable Scenarios where IsFlyableArea returns true:
+	[1662] = -1, -- Assault of the Sanctum of Order
+	[1906] = -1, -- Zandalar Continent Finale
+	[1917] = -1, -- Mag'har Scenario
+
+	-- Unflyable Lesser Visions where IsFlyableArea returns true:
+	[2275] = -1, -- Vale of Eternal Twilight
 }
 
 local noFlySubzones = {
